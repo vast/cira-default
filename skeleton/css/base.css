@@ -1,20 +1,20 @@
 html {font: 100.1% Arial, Verdana, sans-serif}
 html, body, h1, h2, h3, h4, ul, li, ol, dl, dt, dd, p, form, fieldset, label, img, table {
-    padding: 0; margin: 0; font-size: 100%; font-weight: normal; border: 0
+  padding: 0; margin: 0; font-size: 100%; font-weight: normal; border: 0
 }
 
 body {
-    line-height: 1.1em;
-    font-size: 75%;
-    color: #666;
-    background: #fff;
+  color: #444;
+  background: #fff;
+  font: normal 87.5%/1.4 Trebuchet MS, Arial, Helvetica, sans-serif;
 }
 /* links */
+a, a:visited, a:hover {color: #000}
 a {}
 a:visited {}
 a:hover {}
 /* headers, paragraphs */
-h1, h2, h3, h4 {margin: 1em 0 .5em}
+h1, h2, h3, h4 {margin: 1em 0 .5em; color: #000}
 p {margin: .5em 0}
 h1 {font-size: 2em}
 h2 {font-size: 150%}
@@ -33,3 +33,5 @@ dd {padding-left: 30px}
 .a-center {text-align: center}
 .a-left {text-align: left}
 .a-right {text-align: right}
+
+#wrap {margin: 0 auto; width: 70em}
