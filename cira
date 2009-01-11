@@ -1,0 +1,25 @@
+#!/bin/sh
+SKELETON_PATH="skeleton"
+IDEA_TEMPLATES="idea"
+
+die() {
+    echo "$*"
+    exit 1
+}
+
+generate_idea_files() {
+    cat "$IDEA_TEMPLATES/project.xml" | sed -e "s|#{CR_PROJECT_NAME}|$1|g" > "$2/$1.ipr"
+    cp "$IDEA_TEMPLATES/module.xml" "$2/$1.iml"
+}
+
+[ -z "$1" ] && die "project name required"
+[ -e "$1" ] && die "file already exists"
+project=${1##*/}
+
+mkdir -p $1
+rmdir $1
+cp -r "$SKELETON_PATH" "$1"
+sed -e "s|#{CR_PROJECT_NAME}|$project|" < "$1/index.html" > "$1/index.new" 
+mv "$1/index.new" "$1/index.html"
+
+[ "$2" = "-i" ] && generate_idea_files $project $1

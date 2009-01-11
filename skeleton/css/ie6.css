@@ -1,0 +1,20 @@
+/*clearing*/
+.wrap {height: 1%}
+/* png fixes */
+.bg-png-crop {
+filter: expression(
+(runtimeStyle.filter == '') ? runtimeStyle.filter = 'progid:DXImageTransform.Microsoft.AlphaImageLoader(src='+currentStyle.backgroundImage.split('\"')[1]+', sizingMethod=crop)' : runtimeStyle.filter,
+runtimeStyle.backgroundImage = 'none');
+}
+
+.bg-png-scale {
+filter: expression(
+(runtimeStyle.backgroundImage != 'none') ? runtimeStyle.filter = 'progid:DXImageTransform.Microsoft.AlphaImageLoader(src='+currentStyle.backgroundImage.split('\"')[1]+', sizingMethod=scale)' : runtimeStyle.filter,
+runtimeStyle.backgroundImage = 'none');
+}
+
+img.this-src-png {
+width: expression(width);
+filter: expression( (runtimeStyle.filter == '') ? runtimeStyle.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(src='"+src+"', sizingMethod='image')" : '',
+src = '../i/0.gif');
+}
