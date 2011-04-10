@@ -6,13 +6,15 @@ html, body, h1, h2, h3, h4, ul, li, ol, dl, dt, dd, p, form, fieldset, label, im
 body {
   color: #444;
   background: #fff;
-  font: normal 87.5%/1.4 Trebuchet MS, Arial, Verdana, sans-serif;
+  font: normal normal 100%/1.4 Helvetica, Arial, sans-serif
 }
+
 /* links */
 a, a:visited, a:hover {color: #000}
 a {}
 a:visited {}
 a:hover {}
+
 /* headers, paragraphs */
 h1, h2, h3, h4 {margin: 1em 0 .5em; color: #000}
 p {margin: .5em 0}
@@ -20,10 +22,12 @@ h1 {font-size: 2em}
 h2 {font-size: 150%}
 h3 {font-size: 125%}
 h4 {font-size: 110%; font-weight: bold}
+
 /* lists */
-ul, ol {list-style-position: inside; padding-left: 20px}
+ul, ol {list-style-position: inside; padding-left: 24px}
 dt {font-weight: bold}
-dd {padding-left: 30px}
+dd {padding-left: 32px}
+
 /* common useful styles */
 .hidden {display: none}
 .visible {display: block!important}
@@ -34,4 +38,5 @@ dd {padding-left: 30px}
 .a-left {text-align: left}
 .a-right {text-align: right}
 
-#wrap {margin: 0 auto; width: 70em}
+/* layout */
+#wrap {margin: 0 auto; width: 62em}
